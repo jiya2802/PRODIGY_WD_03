@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li>Tic-Tac-Toe</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-home">
+        <div class="home d-flex d-col " id="start-buttons">
+            <h1>Welcome to Tic Tac Toe!</h1>
+            <a href="#main"><button onclick="startGame(false)">Play as Two Players</button></a>
+            <a href="#main"><button onclick="startGame(true)">Play with AI</button></a>
+        </div>
+        <div class="msg-container hide">
+            <p id="msg">Winner</p>
+            <button id="new-btn">New Game</button>
+          </div>
+        <div id="main">
+            <div class="board" id="board">
+                <!-- <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
