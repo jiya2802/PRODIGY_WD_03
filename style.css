@@ -7,13 +7,6 @@ body{
     background-color: #DA9F93;
 }
 
-.d-flex{
-    display: flex;
-}
-
-.d-col{
-    flex-direction: column;
-}
 
 .main-home{
     display: flex;
@@ -59,6 +52,8 @@ nav ul li{
 }
 
 .home{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
     align-items: center;

@@ -6,11 +6,14 @@ let isHumanVsAI = false;
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let home=document.querySelector(".home")
 
 function resetGame(){
-    startButtons.style.display = 'flex';
-    msgContainer.classList.add("hide");
-    board.style.display = 'none';
+   home.style.display='flex';
+   msgContainer.classList.add("hide");
+   board.innerHTML = '';
+    currentPlayer = 'X';
+    gameOver = false;
 }
 
 function makeMove(cell) {
@@ -40,8 +43,6 @@ function startGame(vsAI) {
       isHumanVsAI = vsAI;
       startButtons.style.display = 'none';
       board.style.display = 'grid';
-
-      // Create the game board
       for (let i = 0; i < 9; i++) {
           const cell = document.createElement('div');
           cell.className = 'cell';
@@ -51,11 +52,6 @@ function startGame(vsAI) {
       }
   }
 
-
-
-  // Handle player moves
-
-  // Check for a winner
   function checkWinner() {
       const lines = [
           [0, 1, 2],
@@ -81,12 +77,9 @@ function startGame(vsAI) {
       return false;
   }
 
-  // Check if the board is full (a tie)
   function isBoardFull() {
       return Array.from(board.children).every(cell => cell.textContent !== '');
   }
-
-  // AI makes a move
   function makeAIMove() {
       const emptyCells = Array.from(board.children).filter(cell => cell.textContent === '');
       if (emptyCells.length > 0 && !gameOver) {
